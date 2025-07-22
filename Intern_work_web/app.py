@@ -597,7 +597,7 @@ html, body, .stApp {{
 <div class="header-container">
     <img src="{image_url}" alt="Logo" style="height: 50px;">
     <h1 style="font-size: 2rem; font-weight: 800; color: #fdbb2d; text-shadow: 0 2px 10px rgba(0,0,0,0.3); text-transform: uppercase; margin: 0;">
-        Teqnitehub
+        TEQNITEHUB
     </h1>
 </div>
 
@@ -610,8 +610,6 @@ html, body, .stApp {{
     <a href="#contact" class="navbar-link">Contact</a>
 </div>
 """, unsafe_allow_html=True)
-
-
 
 # Set page background
 st.markdown(
@@ -628,95 +626,14 @@ st.markdown(
 
 st.markdown("---")
 
-# Typing animation HTML
-components.html("""
-<div id="typed-text-container" style="display: flex; justify-content: center; margin-top: 0; margin-bottom: 0;">
-  <div id="typed-text" style="
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 700;
-      text-align: center;
-      color: white;
-      max-width: 90%;
-      line-height: 1.4;
-      word-break: break-word;
-  "></div>
+# Hero Section with Typing Animation
+st.markdown("""
+<div style="text-align: center; padding: 40px 20px; margin-bottom: 40px;">
+    <h2 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 20px;">YOUR FUTURE IS CREATED BY WHAT YOU DO</h2>
+    <h1 style="font-size: 4rem; color: #fdbb2d; margin-bottom: 10px;">TODAY</h1>
+    <h3 style="font-size: 1.8rem; color: #888888; text-decoration: line-through;">NOT TOMORROW</h3>
 </div>
-
-<!-- Spacer to push buttons down on mobile -->
-<div class="mobile-spacer"></div>
-
-<script>
-const letters = [
-  "“","<br>",
-  "<span style='font-size:28px;'>Y</span>",
-  "<span style='font-size:28px;'>O</span>",
-  "<span style='font-size:28px;'>U</span>",
-  "<span style='font-size:28px;'>R</span>", " ",
-  "<span style='font-size:28px; color:#fdbb2d;'>F</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>U</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>T</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>U</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>R</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>E</span>", " ",
-  "<span style='font-size:28px;'>I</span>",
-  "<span style='font-size:28px;'>S</span>", " ",
-  "<span style='font-size:28px;'>C</span>",
-  "<span style='font-size:28px;'>R</span>",
-  "<span style='font-size:28px;'>E</span>",
-  "<span style='font-size:28px;'>A</span>",
-  "<span style='font-size:28px;'>T</span>",
-  "<span style='font-size:28px;'>E</span>",
-  "<span style='font-size:28px;'>D</span>", " ",
-  "<span style='font-size:28px;'>B</span>",
-  "<span style='font-size:28px;'>Y</span>", " ",
-  "<span style='font-size:28px;'>W</span>",
-  "<span style='font-size:28px;'>H</span>",
-  "<span style='font-size:28px;'>A</span>",
-  "<span style='font-size:28px;'>T</span>", "<br>",
-  "<span style='font-size:60px;'>Y</span>",
-  "<span style='font-size:60px;'>O</span>",
-  "<span style='font-size:60px;'>U</span>", " ",
-  "<span style='font-size:60px;'>D</span>",
-  "<span style='font-size:60px;'>O</span>", " ",
-  "<span style='font-size:100px; color:#fdbb2d;'>{</span>", " ",
-  "<span style='font-size:90px;'>T</span>",
-  "<span style='font-size:90px;'>O</span>",
-  "<span style='font-size:90px;'>D</span>",
-  "<span style='font-size:90px;'>A</span>",
-  "<span style='font-size:90px;'>Y</span>", " ",
-  "<span style='font-size:100px; color:#fdbb2d;'>}</span>", "<br>",
-  "<span style='font-size:28px; text-decoration: line-through;'>N</span>",
-  "<span style='font-size:28px; text-decoration: line-through;'>O</span>",
-  "<span style='font-size:28px; text-decoration: line-through;'>T</span>", " ",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>T</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>M</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>R</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>R</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>W</span>",
-  ".", "”"
-];
-
-let i = 0;
-let output = "";
-
-function typeLetter() {
-    if (i < letters.length) {
-        output += letters[i];
-        document.getElementById("typed-text").innerHTML = output;
-        i++;
-        setTimeout(typeLetter, 40);
-    } else {
-        // Add spacing on mobile after animation
-        document.querySelector(".mobile-spacer").style.height = "100px";
-    }
-}
-
-window.onload = typeLetter;
-</script>
-""", height=500)
+""", unsafe_allow_html=True)
 
 # Buttons below animation
 cols = st.columns(2)
@@ -761,56 +678,7 @@ with col3:
     </div>
     """, unsafe_allow_html=True)
 
-# Stats Section
-# st.markdown("<h2 style='text-align: center; margin-top: 50px; color: #fdbb2d;'>Our Impact in Numbers</h2>", unsafe_allow_html=True)
-
-# counters_html = """
-# <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin: 40px 0;">
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count1">0</span>+</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Interns Trained</p>
-#   </div>
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count2">0</span>%</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Placement Rate</p>
-#   </div>
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count3">0</span>+</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Countries</p>
-#   </div>
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count4">0</span>+</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Partner Companies</p>
-#   </div>
-# </div>
-
-# <script>
-# function animateValue(id, start, end, duration) {
-#     let range = end - start;
-#     let current = start;
-#     let increment = end > start ? 1 : -1;
-#     let stepTime = Math.abs(Math.floor(duration / range));
-#     let obj = document.getElementById(id);
-#     let timer = setInterval(function() {
-#         current += increment;
-#         obj.innerHTML = current;
-#         if (current == end) {
-#             clearInterval(timer);
-#         }
-#     }, stepTime);
-# }
-# window.onload = function() {
-#     animateValue("count1", 0, 500, 2000);
-#     animateValue("count2", 0, 85, 2000);
-#     animateValue("count3", 0, 20, 2000);
-#     animateValue("count4", 0, 50, 2000);
-# }
-# </script>
-# """
-
-# components.html(counters_html, height=200)
-
-# # Testimonials
+# Testimonials
 st.markdown("<h2 style='text-align: center; color: #fdbb2d;'>What Our Students Say</h2>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
@@ -847,8 +715,6 @@ with col4:
     </div>
     """, unsafe_allow_html=True)
 
-
-
 # -------------------------------
 # ABOUT SECTION
 # -------------------------------
@@ -867,8 +733,8 @@ with col1:
     <h3 style="color: #fdbb2d;">Our Mission</h3>
     <div class="custom-card">
         <p style="font-size: 18px; line-height: 1.6; margin: 0; color: rgba(255,255,255,0.85);">
-            We aim to make tech learning accessible to everyone — no matter where you’re from. 
-            It’s about building skills that last and opening doors to real opportunities.
+            We aim to make tech learning accessible to everyone — no matter where you're from. 
+            It's about building skills that last and opening doors to real opportunities.
         </p>
     </div>
 
@@ -912,7 +778,6 @@ with col1:
     </div>
     """, unsafe_allow_html=True)
     
-    # if st.button("Coming Soon"):
     st.info("This course is coming soon. Stay tuned!")
 
 
@@ -930,7 +795,6 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
     
-    # if st.button("Coming Soon", key="ml_apply_unique"):
     st.info("This course is coming soon. Stay tuned!")
 
 # Course Benefits
@@ -1030,9 +894,6 @@ for i, (icon, title, desc) in enumerate(highlights):
 st.markdown('<div id="contact"></div>', unsafe_allow_html=True)
 st.markdown("<h1 style='color: #fdbb2d;'>Get In Touch</h1>", unsafe_allow_html=True)
 
-# col1, col2 = st.columns(2)
-
-# with col2:
 with st.form("contact_form", clear_on_submit=True):
     name = st.text_input("Your Name", placeholder="Enter your name")
     email = st.text_input("Your Email", placeholder="Enter your email address")
@@ -1044,9 +905,6 @@ with st.form("contact_form", clear_on_submit=True):
         else:
             st.warning("Please fill in all fields.")
 
-
-
-# with col1:
 st.markdown("""
 <div class="custom-card">
     <h3 style="color: white;">Contact Information</h3>
