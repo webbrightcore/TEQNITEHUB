@@ -534,6 +534,84 @@ inject_custom_css()
 # Replace with your own hosted image URL (from Imgur, Postimages, etc.)
 image_url = "https://i.postimg.cc/504WbwWx/img2-removebg-preview.png"  # 👈 Replace this with your hosted logo URL
 
+# st.markdown(f"""
+# <style>
+# /* Layout fix */
+# .block-container, .main {{
+#     padding-top: 0 !important;
+#     margin-top: 0 !important;
+# }}
+# html, body, .stApp {{
+#     overflow-x: hidden;
+#     margin: 0;
+#     padding: 0;
+#     background-color: #0e1117;
+# }}
+
+# /* Header container with flex layout */
+# .header-container {{
+#     display: flex;
+#     align-items: center;
+#     gap: 15px;
+#     margin-bottom: 20px;
+# }}
+
+# /* Navbar links */
+# .navbar-links {{
+#     display: flex;
+#     flex-wrap: wrap;
+#     gap: 10px;
+#     align-items: center;
+#     margin-top: 0;
+# }}
+# .navbar-link {{
+#     padding: 6px 16px;
+#     color: white !important;
+#     text-decoration: none;
+#     font-weight: 600;
+#     font-size: 0.9rem;
+#     white-space: nowrap;
+#     border-radius: 50px;
+#     border: 1px solid rgba(255, 255, 255, 0.1);
+#     background: none;
+#     transition: all 0.3s ease;
+# }}
+# .navbar-link.active,
+# .navbar-link:hover {{
+#     background-color: #fdbb2d;
+#     color: #000 !important;
+# }}
+
+# @media (max-width: 768px) {{
+#     .header-container {{
+#         flex-direction: column;
+#         text-align: center;
+#     }}
+#     .navbar-links {{
+#         justify-content: center;
+#     }}
+# }}
+# </style>
+
+# <!-- Logo + Title -->
+# <div class="header-container">
+#     <img src="{image_url}" alt="Logo" style="height: 50px;">
+#     <h1 style="font-size: 2rem; font-weight: 800; color: #fdbb2d; text-shadow: 0 2px 10px rgba(0,0,0,0.3); text-transform: uppercase; margin: 0;">
+#         Teqnitehub
+#     </h1>
+# </div>
+
+# <!-- Navigation Links -->
+# <div class="navbar-links">
+#     <a href="#home" class="navbar-link active">Home</a>
+#     <a href="#about" class="navbar-link">About</a>
+#     <a href="#courses" class="navbar-link">Courses</a>
+#     <a href="#programs" class="navbar-link">Programs</a>
+#     <a href="#contact" class="navbar-link">Contact</a>
+# </div>
+# """, unsafe_allow_html=True)
+
+
 st.markdown(f"""
 <style>
 /* Layout fix */
@@ -552,8 +630,18 @@ html, body, .stApp {{
 .header-container {{
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 15px;
     margin-bottom: 20px;
+}}
+
+/* Ensure row layout even on small screens */
+@media (max-width: 768px) {{
+    .header-container {{
+        flex-direction: row !important;
+        justify-content: center !important;
+        text-align: center;
+    }}
 }}
 
 /* Navbar links */
@@ -580,16 +668,6 @@ html, body, .stApp {{
 .navbar-link:hover {{
     background-color: #fdbb2d;
     color: #000 !important;
-}}
-
-@media (max-width: 768px) {{
-    .header-container {{
-        flex-direction: column;
-        text-align: center;
-    }}
-    .navbar-links {{
-        justify-content: center;
-    }}
 }}
 </style>
 
