@@ -555,6 +555,7 @@ html, body, .stApp {{
     gap: 15px;
     margin-bottom: 20px;
 }}
+
 /* Navbar links */
 .navbar-links {{
     display: flex;
@@ -581,13 +582,15 @@ html, body, .stApp {{
     color: #000 !important;
 }}
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {{
     .header-container {{
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
+        flex-direction: column;
+        text-align: center;
     }}
-}
+    .navbar-links {{
+        justify-content: center;
+    }}
+}}
 </style>
 
 <!-- Logo + Title -->
