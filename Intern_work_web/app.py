@@ -534,6 +534,8 @@ inject_custom_css()
 # Replace with your own hosted image URL (from Imgur, Postimages, etc.)
 image_url = "https://i.postimg.cc/504WbwWx/img2-removebg-preview.png"  # 👈 Replace this with your hosted logo URL
 
+# In the Navigation Bar section, replace the existing CSS with this updated version:
+
 st.markdown(f"""
 <style>
 /* Layout fix */
@@ -551,6 +553,7 @@ html, body, .stApp {{
 /* Header container with flex layout */
 .header-container {{
     display: flex;
+    flex-direction: column;  /* Changed from row to column for mobile */
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
@@ -563,6 +566,7 @@ html, body, .stApp {{
     gap: 10px;
     align-items: center;
     margin-top: 0;
+    justify-content: center;  /* Added to center links */
 }}
 .navbar-link {{
     padding: 6px 16px;
@@ -582,13 +586,33 @@ html, body, .stApp {{
     color: #000 !important;
 }}
 
+/* Mobile-specific styles */
 @media (max-width: 768px) {{
     .header-container {{
-        flex-direction: column;
+        flex-direction: column;  /* Ensures vertical layout */
         text-align: center;
     }}
+    
+    .header-container img {{
+        order: 1;  /* Logo comes first */
+        margin-bottom: 10px;
+    }}
+    
+    .header-container h1 {{
+        order: 2;  /* Title comes after logo */
+        margin-bottom: 15px;
+    }}
+    
     .navbar-links {{
+        order: 3;  /* Navigation links come last */
+        width: 100%;
         justify-content: center;
+        margin-top: 10px;
+    }}
+    
+    .navbar-link {{
+        padding: 6px 12px;
+        font-size: 0.85rem;
     }}
 }}
 </style>
@@ -610,6 +634,7 @@ html, body, .stApp {{
     <a href="#contact" class="navbar-link">Contact</a>
 </div>
 """, unsafe_allow_html=True)
+
 
 # Set page background
 st.markdown(
