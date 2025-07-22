@@ -549,13 +549,11 @@ html, body, .stApp {{
 }}
 
 /* Header container with flex layout */
-.header-container {{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}}
-
+.header-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
 /* Navbar links */
 .navbar-links {{
     display: flex;
