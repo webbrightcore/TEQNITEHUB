@@ -532,7 +532,7 @@ inject_custom_css()
 # -------------------------------
 
 # Replace with your own hosted image URL (from Imgur, Postimages, etc.)
-image_url = "https://i.postimg.cc/504WbwWx/img2-removebg-preview.png"  # 👈 Replace this with your hosted logo URL
+image_url = "https://i.postimg.cc/9XRV1j0d/img.png"  # 👈 Replace this with your hosted logo URL
 
 st.markdown(f"""
 <style>
