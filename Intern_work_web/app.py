@@ -766,55 +766,6 @@ with col3:
     </div>
     """, unsafe_allow_html=True)
 
-# Stats Section
-# st.markdown("<h2 style='text-align: center; margin-top: 50px; color: #fdbb2d;'>Our Impact in Numbers</h2>", unsafe_allow_html=True)
-
-# counters_html = """
-# <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin: 40px 0;">
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count1">0</span>+</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Interns Trained</p>
-#   </div>
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count2">0</span>%</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Placement Rate</p>
-#   </div>
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count3">0</span>+</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Countries</p>
-#   </div>
-#   <div class="stats-card" style="text-align: center; width: 200px; padding: 30px 20px;">
-#     <h3 style="color: #fdbb2d; font-size: 2.5rem; margin: 0;"><span id="count4">0</span>+</h3>
-#     <p style="font-size: 1.1rem; margin: 10px 0 0; color: rgba(255,255,255,0.8);">Partner Companies</p>
-#   </div>
-# </div>
-
-# <script>
-# function animateValue(id, start, end, duration) {
-#     let range = end - start;
-#     let current = start;
-#     let increment = end > start ? 1 : -1;
-#     let stepTime = Math.abs(Math.floor(duration / range));
-#     let obj = document.getElementById(id);
-#     let timer = setInterval(function() {
-#         current += increment;
-#         obj.innerHTML = current;
-#         if (current == end) {
-#             clearInterval(timer);
-#         }
-#     }, stepTime);
-# }
-# window.onload = function() {
-#     animateValue("count1", 0, 500, 2000);
-#     animateValue("count2", 0, 85, 2000);
-#     animateValue("count3", 0, 20, 2000);
-#     animateValue("count4", 0, 50, 2000);
-# }
-# </script>
-# """
-
-# components.html(counters_html, height=200)
-
 # # Testimonials
 st.markdown("<h2 style='text-align: center; color: #fdbb2d;'>What Our Students Say</h2>", unsafe_allow_html=True)
 
