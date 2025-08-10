@@ -469,7 +469,7 @@ inject_custom_css()
 # -----------------------
 # Firebase Configuration
 # -----------------------
-FIREBASE_PROJECT_ID = "TEQNITEHUB-86c38"
+FIREBASE_PROJECT_ID = "teqnitehub"
 FIREBASE_DB_URL = f"https://firestore.googleapis.com/v1/projects/{FIREBASE_PROJECT_ID}/databases/(default)/documents"
 
 # -----------------------
