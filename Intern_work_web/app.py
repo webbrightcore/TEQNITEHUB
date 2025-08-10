@@ -634,13 +634,12 @@ st.markdown(
 st.markdown("---")
 
 # Typing animation HTML
-# Replace your current typing animation HTML with this:
 components.html("""
-<div id="typed-text-container" style="display: flex; margin-top: 0; margin-bottom: 0; padding-left: 20px;">
+<div id="typed-text-container" style="display: flex; justify-content: center; margin-top: 0; margin-bottom: 0;">
   <div id="typed-text" style="
       font-family: 'Helvetica Neue', sans-serif;
       font-weight: 700;
-      text-align: left;
+      text-align: center;
       color: white;
       max-width: 90%;
       line-height: 1.4;
@@ -723,6 +722,7 @@ function typeLetter() {
 window.onload = typeLetter;
 </script>
 """, height=500)
+
 # Buttons below animation
 cols = st.columns(2)
 with cols[0]:
