@@ -463,7 +463,7 @@ inject_custom_css()
 
 
 # Firebase Configuration
-FIREBASE_PROJECT_ID = "TEQNITEHUB-86c38"  # Replace with your Firebase project ID
+FIREBASE_PROJECT_ID = "teqnitehub"  # Replace with your Firebase project ID
 FIREBASE_DB_URL = f"https://firestore.googleapis.com/v1/projects/{FIREBASE_PROJECT_ID}/databases/(default)/documents"
 
 # Initialize session state
