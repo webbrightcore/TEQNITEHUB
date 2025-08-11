@@ -120,19 +120,6 @@ def inject_custom_css():
             font-family: 'Segoe UI', sans-serif;
         }
         
-        /* Typing Animation Container Fixes */
-        iframe[title="components.html"] {
-            width: 100% !important;
-            min-width: 100% !important;
-            max-width: 100% !important;
-            margin: 0 auto !important;
-            padding: 0 !important;
-            border: none !important;
-            display: block !important;
-            position: relative !important;
-            overflow: hidden !important;
-        }
-        
         /* Modern Navbar */
         .navbar-container {
             display: flex;
@@ -148,18 +135,404 @@ def inject_custom_css():
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Rest of your existing CSS... */
-        /* ... (keep all your other existing CSS styles) ... */
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
         
+        .navbar-title {
+            font-size: 2.2rem;
+            margin: 0;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #ffffff, #f9f9f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .navbar-tabs {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .navbar-tab {
+            justify-content: center;
+            padding: 8px 20px;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            position: relative;
+            white-space: nowrap;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .navbar-tab:hover {
+            color: #000 !important;
+            background: #fdbb2d !important;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .navbar-tab.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.3);
+            font-weight: 700;
+        }
+        
+        .navbar-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 50px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-header {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #ffffff, #f9f9f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 22px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+        
+        /* Cards */
+        .custom-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .custom-card h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .custom-card p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .custom-card ul {
+            padding-left: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        /* Buttons - Updated to use #fdbb2d color */
+        .stButton>button {
+        border-radius: 50px;
+        padding: 12px 28px;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.08) !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 0.5px;
+    }
+    
+    .stButton>button:hover {
+        background: #fdbb2d !important;
+        color: #000 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .stButton>button:active {
+        transform: translateY(0);
+        background: rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .stButton>button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        transition: 0.5s;
+    }
+    
+    .stButton>button:hover::after {
+        left: 100%;
+    }
+        
+        /* Form submit button specific styling */
+        .stButton>button[type="submit"] {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        /* Images */
+        .feature-img {
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .feature-img:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin: 25px 0;
+            border-left: 4px solid #fdbb2d;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: white;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin: 25px 0;
+            border-left: 4px solid #5f2c82;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Stats */
+        .stats-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar-container {
+                padding: 10px;
+            }
+            
+            .navbar-content {
+                flex-direction: column;
+            }
+            
+            .navbar-title {
+                font-size: 1.8rem;
+                padding: 5px 0;
+                margin-bottom: 10px;
+            }
+            
+            .navbar-tabs {
+                gap: 8px;
+                margin-top: 5px;
+            }
+            
+            .navbar-tab {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .hero-header {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .custom-card {
+                padding: 20px;
+            }
+            
+            .feature-img {
+                height: 200px;
+            }
+            
+            /* Stack columns on mobile */
+            [data-testid="column"] {
+                width: 100% !important;
+                padding: 0 !important;
+                margin-bottom: 20px;
+            }
+            
+            /* Adjust typing animation container */
+            #typed-text {
+                font-size: 1.5rem;
+                line-height: 1.3;
+                margin-top: -100px;
+            }
+            
+            /* Adjust button sizes */
+            .stButton>button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            /* Adjust testimonial layout */
+            .testimonial-card {
+                margin: 10px 0;
+                padding: 20px;
+            }
+            
+            /* Make sure images don't overflow */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Adjust program cards */
+            .custom-card h2 {
+                font-size: 1.5rem;
+            }
+            
+            /* Reduce padding in about section */
+            .hero-section {
+                padding: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            /* Navbar responsive styles */
+            .st-emotion-cache-1kyxreq {
+                flex-direction: column !important;
+                gap: 10px !important;
+            }
+            
+            h1 {
+                width: 100% !important;
+                text-align: center !important;
+                margin-bottom: 10px !important;
+                font-size: 1.8rem !important;
+            }
+            
+            .navbar-tabs {
+                width: 100% !important;
+                justify-content: center !important;
+                flex-wrap: wrap !important;
+                gap: 8px !important;
+            }
+            
+            .navbar-tab {
+                padding: 6px 12px !important;
+                font-size: 0.85rem !important;
+            }
+        }
+        html, body, .stApp {
+    overflow-x: hidden;
+}
+
+/* Only show spacer on small screens */
+.mobile-spacer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-spacer {
+        display: block;
+        height: 0px;  /* Will be updated via JS */
+        transition: height 0.3s ease;
+    }
+}
     </style>
     """, unsafe_allow_html=True)
-
 inject_custom_css()
 
 # -------------------------------
 # Navigation Bar
 # -------------------------------
-image_url = "https://i.postimg.cc/9XRV1j0d/img.png"
+
+# Replace with your own hosted image URL (from Imgur, Postimages, etc.)
+image_url = "https://i.postimg.cc/9XRV1j0d/img.png"  # 👈 Replace this with your hosted logo URL
 
 st.markdown(f"""
 <style>
@@ -243,6 +616,8 @@ html, body, .stApp {{
 </div>
 """, unsafe_allow_html=True)
 
+
+
 # Set page background
 st.markdown(
     """
@@ -258,43 +633,17 @@ st.markdown(
 
 st.markdown("---")
 
-# -------------------------------
-# Typing Animation (Fixed Centering)
-# -------------------------------
-st.markdown("""
-<div style="
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-direction: column !important;
-">
-""", unsafe_allow_html=True)
-
+# Typing animation HTML
 components.html("""
-<div id="typed-text-container" style="
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    text-align: center !important;
-">
+<div id="typed-text-container" style="display: flex; justify-content: center; margin-top: 0; margin-bottom: 0;">
   <div id="typed-text" style="
-      font-family: 'Helvetica Neue', sans-serif !important;
-      font-weight: 700 !important;
-      text-align: center !important;
-      color: white !important;
-      width: 100% !important;
-      max-width: 90% !important;
-      line-height: 1.4 !important;
-      word-break: break-word !important;
-      margin: 0 auto !important;
-      display: inline-block !important;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+      text-align: center;
+      color: white;
+      max-width: 90%;
+      line-height: 1.4;
+      word-break: break-word;
   "></div>
 </div>
 
@@ -365,37 +714,14 @@ function typeLetter() {
         i++;
         setTimeout(typeLetter, 40);
     } else {
+        // Add spacing on mobile after animation
         document.querySelector(".mobile-spacer").style.height = "100px";
     }
 }
 
-function centerText() {
-    const container = document.getElementById('typed-text-container');
-    if (container) {
-        container.style.textAlign = 'center';
-        container.style.justifyContent = 'center';
-    }
-}
-
-// Double ensure centering
-document.addEventListener('DOMContentLoaded', function() {
-    typeLetter();
-    centerText();
-    setInterval(centerText, 1000); // Keep checking every second
-});
-
-window.addEventListener('load', function() {
-    typeLetter();
-    centerText();
-});
-
-window.addEventListener('resize', centerText);
+window.onload = typeLetter;
 </script>
 """, height=500)
-
-st.markdown("</div>", unsafe_allow_html=True)
-
-
 
 # Buttons below animation
 cols = st.columns(2)
@@ -690,5 +1016,3 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
-
-
