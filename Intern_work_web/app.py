@@ -82,6 +82,17 @@ def get_image(url, fallback_key):
 def inject_custom_css():
     st.markdown("""
     <style>
+        iframe[title="components.html"] {
+        width: 100% !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    
+    /* Ensure our animation container stays centered */
+    #typed-text-container {
+        justify-content: center !important;
+        text-align: center !important;
+    }
         /* Remove all sidebar elements */
         section[data-testid="stSidebar"] {
             display: none !important;
@@ -634,21 +645,25 @@ st.markdown(
 st.markdown("---")
 
 # Typing animation HTML
+# Typing animation HTML
 components.html("""
-<div id="typed-text-container" style="display: flex; justify-content: center; margin-top: 0; margin-bottom: 0;">
-  <div id="typed-text" style="
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 700;
-      text-align: center;
-      color: white;
-      max-width: 90%;
-      line-height: 1.4;
-      word-break: break-word;
-  "></div>
-</div>
+<div style="width: 100% !important; margin: 0 auto !important;">
+    <div id="typed-text-container" style="display: flex !important; justify-content: center !important; margin: 0 auto !important; width: 100% !important;">
+      <div id="typed-text" style="
+          font-family: 'Helvetica Neue', sans-serif !important;
+          font-weight: 700 !important;
+          text-align: center !important;
+          color: white !important;
+          max-width: 90% !important;
+          line-height: 1.4 !important;
+          word-break: break-word !important;
+          margin: 0 auto !important;
+      "></div>
+    </div>
 
-<!-- Spacer to push buttons down on mobile -->
-<div class="mobile-spacer"></div>
+    <!-- Spacer to push buttons down on mobile -->
+    <div class="mobile-spacer"></div>
+</div>
 
 <script>
 const letters = [
@@ -722,7 +737,6 @@ function typeLetter() {
 window.onload = typeLetter;
 </script>
 """, height=500)
-
 # Buttons below animation
 cols = st.columns(2)
 with cols[0]:
@@ -1016,3 +1030,4 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
