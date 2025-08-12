@@ -636,95 +636,95 @@ st.markdown("---")
 col1,col2,col3 = st.columns(3)
 with st.col2:
 
-# Typing animation HTML
-components.html("""
-<div id="typed-text-container" style="display: flex; justify-content: center; margin-top: 0; margin-bottom: 0;">
-  <div id="typed-text" style="
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 700;
-      text-align: center;
-      color: white;
-      max-width: 90%;
-      line-height: 1.4;
-      word-break: break-word;
-  "></div>
-</div>
-
-<!-- Spacer to push buttons down on mobile -->
-<div class="mobile-spacer"></div>
-
-<script>
-const letters = [
-  "“","<br>",
-  "<span style='font-size:28px;'>Y</span>",
-  "<span style='font-size:28px;'>O</span>",
-  "<span style='font-size:28px;'>U</span>",
-  "<span style='font-size:28px;'>R</span>", " ",
-  "<span style='font-size:28px; color:#fdbb2d;'>F</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>U</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>T</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>U</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>R</span>",
-  "<span style='font-size:28px; color:#fdbb2d;'>E</span>", " ",
-  "<span style='font-size:28px;'>I</span>",
-  "<span style='font-size:28px;'>S</span>", " ",
-  "<span style='font-size:28px;'>C</span>",
-  "<span style='font-size:28px;'>R</span>",
-  "<span style='font-size:28px;'>E</span>",
-  "<span style='font-size:28px;'>A</span>",
-  "<span style='font-size:28px;'>T</span>",
-  "<span style='font-size:28px;'>E</span>",
-  "<span style='font-size:28px;'>D</span>", " ",
-  "<span style='font-size:28px;'>B</span>",
-  "<span style='font-size:28px;'>Y</span>", " ",
-  "<span style='font-size:28px;'>W</span>",
-  "<span style='font-size:28px;'>H</span>",
-  "<span style='font-size:28px;'>A</span>",
-  "<span style='font-size:28px;'>T</span>", "<br>",
-  "<span style='font-size:60px;'>Y</span>",
-  "<span style='font-size:60px;'>O</span>",
-  "<span style='font-size:60px;'>U</span>", " ",
-  "<span style='font-size:60px;'>D</span>",
-  "<span style='font-size:60px;'>O</span>", " ",
-  "<span style='font-size:100px; color:#fdbb2d;'>{</span>", " ",
-  "<span style='font-size:90px;'>T</span>",
-  "<span style='font-size:90px;'>O</span>",
-  "<span style='font-size:90px;'>D</span>",
-  "<span style='font-size:90px;'>A</span>",
-  "<span style='font-size:90px;'>Y</span>", " ",
-  "<span style='font-size:100px; color:#fdbb2d;'>}</span>", "<br>",
-  "<span style='font-size:28px; text-decoration: line-through;'>N</span>",
-  "<span style='font-size:28px; text-decoration: line-through;'>O</span>",
-  "<span style='font-size:28px; text-decoration: line-through;'>T</span>", " ",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>T</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>M</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>R</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>R</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
-  "<span style='font-size:28px; color: grey; opacity: 0.5;'>W</span>",
-  ".", "”"
-];
-
-let i = 0;
-let output = "";
-
-function typeLetter() {
-    if (i < letters.length) {
-        output += letters[i];
-        document.getElementById("typed-text").innerHTML = output;
-        i++;
-        setTimeout(typeLetter, 40);
-    } else {
-        // Add spacing on mobile after animation
-        document.querySelector(".mobile-spacer").style.height = "100px";
+    # Typing animation HTML
+    components.html("""
+    <div id="typed-text-container" style="display: flex; justify-content: center; margin-top: 0; margin-bottom: 0;">
+      <div id="typed-text" style="
+          font-family: 'Helvetica Neue', sans-serif;
+          font-weight: 700;
+          text-align: center;
+          color: white;
+          max-width: 90%;
+          line-height: 1.4;
+          word-break: break-word;
+      "></div>
+    </div>
+    
+    <!-- Spacer to push buttons down on mobile -->
+    <div class="mobile-spacer"></div>
+    
+    <script>
+    const letters = [
+      "“","<br>",
+      "<span style='font-size:28px;'>Y</span>",
+      "<span style='font-size:28px;'>O</span>",
+      "<span style='font-size:28px;'>U</span>",
+      "<span style='font-size:28px;'>R</span>", " ",
+      "<span style='font-size:28px; color:#fdbb2d;'>F</span>",
+      "<span style='font-size:28px; color:#fdbb2d;'>U</span>",
+      "<span style='font-size:28px; color:#fdbb2d;'>T</span>",
+      "<span style='font-size:28px; color:#fdbb2d;'>U</span>",
+      "<span style='font-size:28px; color:#fdbb2d;'>R</span>",
+      "<span style='font-size:28px; color:#fdbb2d;'>E</span>", " ",
+      "<span style='font-size:28px;'>I</span>",
+      "<span style='font-size:28px;'>S</span>", " ",
+      "<span style='font-size:28px;'>C</span>",
+      "<span style='font-size:28px;'>R</span>",
+      "<span style='font-size:28px;'>E</span>",
+      "<span style='font-size:28px;'>A</span>",
+      "<span style='font-size:28px;'>T</span>",
+      "<span style='font-size:28px;'>E</span>",
+      "<span style='font-size:28px;'>D</span>", " ",
+      "<span style='font-size:28px;'>B</span>",
+      "<span style='font-size:28px;'>Y</span>", " ",
+      "<span style='font-size:28px;'>W</span>",
+      "<span style='font-size:28px;'>H</span>",
+      "<span style='font-size:28px;'>A</span>",
+      "<span style='font-size:28px;'>T</span>", "<br>",
+      "<span style='font-size:60px;'>Y</span>",
+      "<span style='font-size:60px;'>O</span>",
+      "<span style='font-size:60px;'>U</span>", " ",
+      "<span style='font-size:60px;'>D</span>",
+      "<span style='font-size:60px;'>O</span>", " ",
+      "<span style='font-size:100px; color:#fdbb2d;'>{</span>", " ",
+      "<span style='font-size:90px;'>T</span>",
+      "<span style='font-size:90px;'>O</span>",
+      "<span style='font-size:90px;'>D</span>",
+      "<span style='font-size:90px;'>A</span>",
+      "<span style='font-size:90px;'>Y</span>", " ",
+      "<span style='font-size:100px; color:#fdbb2d;'>}</span>", "<br>",
+      "<span style='font-size:28px; text-decoration: line-through;'>N</span>",
+      "<span style='font-size:28px; text-decoration: line-through;'>O</span>",
+      "<span style='font-size:28px; text-decoration: line-through;'>T</span>", " ",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>T</span>",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>M</span>",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>R</span>",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>R</span>",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>O</span>",
+      "<span style='font-size:28px; color: grey; opacity: 0.5;'>W</span>",
+      ".", "”"
+    ];
+    
+    let i = 0;
+    let output = "";
+    
+    function typeLetter() {
+        if (i < letters.length) {
+            output += letters[i];
+            document.getElementById("typed-text").innerHTML = output;
+            i++;
+            setTimeout(typeLetter, 40);
+        } else {
+            // Add spacing on mobile after animation
+            document.querySelector(".mobile-spacer").style.height = "100px";
+        }
     }
-}
-
-window.onload = typeLetter;
-</script>
-""", height=500)
+    
+    window.onload = typeLetter;
+    </script>
+    """, height=500)
 
 # Buttons below animation
 cols = st.columns(2)
@@ -1019,5 +1019,6 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
