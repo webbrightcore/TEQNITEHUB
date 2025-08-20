@@ -10,3 +10,4 @@ qrcode
 nltk
 requests
 firebase-admin
+reportlab
