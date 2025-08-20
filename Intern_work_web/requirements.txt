@@ -11,3 +11,6 @@ nltk
 requests
 firebase-admin
 reportlab
+inch
+canvas
+colors
